@@ -150,9 +150,16 @@ page 50210 "Seminar Registration"
         }
         area(factboxes)
         {
+            part(SeminarDetailsFactBox; "Seminar Details FactBox")
+            {
+                ApplicationArea = All;
+                SubPageLink = "No." = field("Seminar No.");
+            }
             part(CustDetailsFactbox; "Customer Details FactBox")
             {
                 ApplicationArea = All;
+                Provider = SeminarLines;
+                SubPageLink = "No." = field("Bill-to Customer No.");
             }
             systempart(SemRegLinksPart; Links)
             {
