@@ -297,6 +297,7 @@ table 50204 "Seminar Registration Header"
 
     trigger OnDelete()
     begin
+        TESTFIELD(Status,Status::Canceled);
         SeminarRegistrationLine.RESET();
         SeminarRegistrationLine.SETRANGE("Document No.", "No.");
         SeminarRegistrationLine.SETRANGE(Registered, TRUE);
@@ -327,7 +328,12 @@ table 50204 "Seminar Registration Header"
             SeminarSetup.TESTFIELD("Seminar Registration Nos.");
             NoSeriesManagement.InitSeries(SeminarSetup."Seminar Registration Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         END;
-
+        
+    InitRecord;
+    end;
+    
+    procedure InitRecord()
+    begin
         IF "Posting Date" = 0D THEN
             "Posting Date" := WORKDATE();
         "Document Date" := WORKDATE();
