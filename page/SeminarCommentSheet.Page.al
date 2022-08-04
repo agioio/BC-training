@@ -10,6 +10,7 @@ page 50203 "Seminar Comment Sheet"
     SourceTable = "Seminar Comment Line";
     UsageCategory = Administration;
     ApplicationArea = All;
+    UsageCategory = None;
 
     layout
     {
