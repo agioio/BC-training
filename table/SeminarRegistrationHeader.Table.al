@@ -1,5 +1,7 @@
 table 50204 "Seminar Registration Header"
 {
+    Caption = "Seminar Registration Header";
+    
     fields
     {
         field(1; "No."; Code[20])
