@@ -1,4 +1,4 @@
-table 56704 "Seminar Comment Line"
+table 50203 "Seminar Comment Line"
 {
     Caption = 'Seminar Comment Line';
     DrillDownPageID = 56707;
