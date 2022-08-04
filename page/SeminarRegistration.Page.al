@@ -79,6 +79,13 @@ page 50210 "Seminar Registration"
                     Tooltip = 'Default tooltip on upgrade.';
                 }
             }
+            part(SeminarLines; "Seminar Registration Subform")
+            {
+                ApplicationArea = All;
+                Enabled = Rec."Seminar No." <> '';
+                SubPageLink = "Document No." = FIELD("No.");
+                UpdatePropagation = Both;
+            }
             group("Seminar Room")
             {
                 field("Room Code"; Rec."Room Code")
