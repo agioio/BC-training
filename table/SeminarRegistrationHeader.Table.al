@@ -64,7 +64,7 @@ table 50204 "Seminar Registration Header"
         {
             Caption = 'Seminar Name';
         }
-        field(5; "Instructor Code"; Code[10])
+        field(5; "Instructor Code"; Code[20])
         {
             Caption = 'Instructor Code';
             TableRelation = Resource WHERE(Type = CONST(Person));
@@ -77,7 +77,7 @@ table 50204 "Seminar Registration Header"
         field(6; "Instructor Name"; Text[100])
         {
             FieldClass = FlowField;
-            CalcFormula = Lookup(Resource.Name WHERE("No." = FIELD("Instructor Code"),
+            CalcFormula = Lookup(Resource.Name WHERE("No." = FIELD("Instructor Resource No."),
                                                       Type = CONST(Person)));
             Caption = 'Instructor Name';
             Editable = false;
@@ -98,7 +98,7 @@ table 50204 "Seminar Registration Header"
         field(10; "Minimum Participants"; Integer)
         {
         }
-        field(11; "Room Code"; Code[10])
+        field(11; "Room Resource No."; Code[10])
         {
             Caption = 'Room Code';
             TableRelation = Resource WHERE(Type = CONST(Machine));
