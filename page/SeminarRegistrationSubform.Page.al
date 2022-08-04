@@ -2,7 +2,7 @@ page 50211 "Seminar Registration Subform"
 {
     Caption = 'Lines';
     DelayedInsert = true;
-    PageType = List;
+    PageType = ListPart;
     SourceTable = "Seminar Registration Line";
     UsageCategory = None;
 
